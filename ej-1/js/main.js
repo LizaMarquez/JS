@@ -165,3 +165,10 @@
 
     // console.log(myFavoritePerson['pets'][1]['name']);
     // console.log(myFavoritePerson.pets[1].name);
+
+
+/*
+    =========================
+    Estructura de control if ... else
+    =========================
+*/
