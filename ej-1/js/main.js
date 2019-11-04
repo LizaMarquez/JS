@@ -168,7 +168,112 @@
 
 
 /*
-    =========================
-    Estructura de control if ... else
-    =========================
+    =====================================
+    Estructura de control (if ... else)
+    =====================================
 */
+
+    /*
+        Sintaxis:
+            La condicional que recibe ésta estructura de control siempre va a ser un valor booleano (BOOLEAN)
+
+            if([condiciona]) {
+                Código que se va a ejecutar si la condicional es igual a "true"
+            } else {
+                Código que se va a ejecutar si la condicional es igual a "false"
+            }
+    */
+
+/*
+    if(false) {
+        alert('La condicional es verdadera');
+    } else {
+        alert('La condicional es falsa');
+    }
+*/
+
+/*
+    var num1 = 20;
+    var num2 = '20';
+
+    if(num1 === num2) {
+        alert(num1 + ' es igual a ' + num2);
+    } else {
+        alert(num1 + ' es diferente a ' + num2);
+    }
+*/
+
+/*
+    var num1 = 10;
+    var num2 = 20;
+    var num3 = 30;
+    var num4 = 40;
+
+    var comprobacion1 = (num1 + num3) === num2;
+    var comprobacion2 = (num4 - num3) === num1;
+
+    var comprobacionFinal = comprobacion1 && comprobacion2;
+    console.log('comprobacionFinal', comprobacionFinal);
+*/
+
+
+
+var nombreUsuario = 'sergio.perez@msn.com';
+var contraseña = 'Serch23';
+/*
+if ((nombreUsuario !== '') && (contraseña !== '')) {
+    console.log('Se validan credenciales en la DB');
+} else {
+    console.log('Se notifica al usuario que ambos campos son obligatorios');
+}
+*/
+
+/*
+    =====================================
+    Iterador, Bucle o Ciclo "for"
+    =====================================
+*/
+
+/*
+    Sintaxis:
+        * Entre los parentesis se ejecutan 3 sentencias:
+            1. Se crea la variable inicial: var nombreVariableInicial = 0;
+            2. Se verifica la condicional: Esto devolverá un valor booleano (BOOLEAN)
+                - true: En este caso se ejecuta el código que está entre las llaves.
+                - false: Se detiene el ciclo.
+            3. Se modifica la variable inicial
+                nombreVariableInicial++
+
+
+            1. Se ejecuta la "sentencia 1". Esta sentencia no se vuelve a ejecutar,
+                ya que sólo se ejecuta en la el primer ciclo.
+            2. Se verifica la validación de la "sentencia 2":
+                Si obtenemos "false" se ejecuta el código del ciclo.
+                Si obtenemos "true" se detiene el ciclo y ya no se ejecuta nada.
+            3. Se ejecuta la "sentencia 3"
+            4. Se repite paso número 2
+            
+
+        for (var indice = 0; indice < 10; indice++) {
+            // Codigo que se va a ejecutar por cada iteración
+        }
+
+*/
+
+var diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+var cuantosDiasHay = diasSemana.length;
+
+console.log('cuantosDiasHay', cuantosDiasHay);
+
+/*
+        El tipo de valor ARRAY, tiene una propiedad llamada "length"
+            que no nos devolverá el número de elementos o valores que 
+            tiene un arreglo (ARRAY).
+*/
+
+
+
+for (var indice = 0; indice < cuantosDiasHay; indice++) {
+    console.log('Hoy es: ', diasSemana[indice] );
+}
+
