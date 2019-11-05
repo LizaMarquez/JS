@@ -1,4 +1,47 @@
-$(function() {
+/*
+    Evento "Ready": se asegura que el código escrito entre las llaves
+        se ejecutará cuando el documento (DOM) esté listo (renderizado) en el navegador.
+
+    Sintaxis 1:
+
+        $( document ).ready(function() {
+            // Handler for .ready() called.
+        });
+
+
+    Sintaxis 2 (Usaremos esta sintaxis en adelante):
+
+        $(function() {
+            // Handler for .ready() called.
+        });
+
+*/
+
+$(function () {
+    /*
+        Selectores: De la misma manera que CSS necesita un "selector" para indicarle al navegador sobre cual elemento se aplicarán los estilos, en
+            JS se requieren selectores para que el navegador sepa sobre cual elemento va a aplicar los comportamientos.
+
+        Sintaxis:
+
+            $('selector');
+
+        Ejemplos:
+
+            $('.small');
+
+            $('#header');
+    */
+
+
+    var subtitle = $('#subtitle');
+    var items = $('.nav-list__item');
+
+    for (var indice = 0; indice < items.length; indice++) {
+        var textoItem = $(items[indice]).text();
+        console.log(textoItem);
+    };
+
     /*
         1. Añadir la clase "text-center" al elemento <h1>
 
@@ -27,14 +70,11 @@ $(function() {
                 sobre el elemento HTML especificado en el selector.
     */
 
-   buttonAddClassCenter.on('mouseenter', function() {
+    buttonAddClassCenter.on('mouseenter', function () {
         titulo.addClass('text-center');
-   });
+    });
 
-   buttonAddClassCenter.on('mouseleave', function(){
+    buttonAddClassCenter.on('mouseleave', function () {
         titulo.removeClass('text-center');
-   });
-
-
-
+    });
 });
